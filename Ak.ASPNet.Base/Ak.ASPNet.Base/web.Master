@@ -1,0 +1,224 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="web.master.cs" Inherits="Ak.ASPNet.Base.web" %>
+
+<!DOCTYPE html>
+
+
+<html>
+<head runat="server">
+    <title>Aktien TI - ASP CORE - Base Project</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" type="image/x-icon" href="Images/favicon.png" />
+    <meta name="description" content="" />
+    <meta name="author" content="http://aktien.mx/" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/aktien.base.css" />
+    <link rel="stylesheet" href="/css/aktien.css" />
+    <link rel="stylesheet" href="/css/aktien.alert.css" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/owl.carousel.css" />
+    <link rel="stylesheet" href="/css/owl.theme.default.css" />
+    <link href="/css/sb-admin-2.css?v=0.001" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+    <script>
+        let tokenized = false;
+        let setupReady = false;
+        let fullControl = false;
+        let aUsr;
+    </script>
+</head>
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="navdesk">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <a id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <ul class="mt-4 navbar-nav pt-3">
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                            <h1 class="ttl_subs_flekk">
+                                
+                            </h1>
+                        </div>
+                    </ul>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <p id="ui-name" class="d-lg-inline d-none mr-3 mt-3 small text_ttlflekk text-right">
+                                    Usuario<br />
+                                    <b>Perfil <i class="fa fa-chevron-down ml-2"></i></b>
+                                </p>
+                                <img id="ui-img" class="img-profile rounded-circle"
+                                    src="/images/us.png" onerror="this.onerror=null; this.src='/images/us.png'" />
+                            </a>
+
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="/MiCuenta">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2"></i>
+                                    Mi Cuenta
+                                </a>
+                                <a class="dropdown-item" href="/Renovar">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2"></i>
+                                    Cambiar contraseña
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2"></i>
+                                    Cerrar Sesión
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div id="nim-container">
+                        <div class="row">
+                            <div class="col-lg-12 col-lg-6 col-sm-12">
+                                <div class="border-bottom-secondary border-left-secondary border-success card mb-4 py-3 shadow-lg">
+                                    <div id="nim-text" class="card-body">
+                                        .border-left-primary
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <asp:ContentPlaceHolder ID="cphBody" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>2023 Powered by <a href="https://aktien.mx/" target="_blank">Aktien TI</a> &copy;</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">¿Listo para salir?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Se cerrará la sesión y todo el trabajo e información no guardada o se perderán.
+                    <br />
+                    <br />
+                    Si está seguro, presione el botón 'Salir'
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-icon-split btn-secondary" data-dismiss="modal">
+                        <span class="icon text-gray-300">
+                            <i class="fa-check-circle fas"></i>
+                        </span>
+                        <span class="text">Seguir trabajando</span>
+                    </a><a id="ui-close" href="#" class="btn btn-icon-split btn-primary ml-3">
+                        <span class="icon text-gray-300">
+                            <i class="fa-door-closed fas"></i>
+                        </span>
+                        <span class="text">Salir</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Modal-->
+
+
+    <div id="UpProgressMain">
+        <div id="Cont_Loading">
+            <img id="img_loading" src="/images/loading.gif" alt="Loading..." />
+        </div>
+
+    </div>
+    <div id="UpFileProgress" style="display: none; visibility: visible;" role="status" aria-hidden="true">
+        <div id="Cont_Loading_F">
+            <div id="div_loading_F">
+                <div class="row">
+                    <div class="col-4 offset-4">
+                        <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card-body" style="">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div id="loading_F_title" class="text-xs font-weight-bold text-info text-uppercase mb-1">Subiendo Archivo</div>
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col-auto">
+                                                <div id="loading_fup" class="h5 mb-0 mr-3 font-weight-bold text-gray-800"></div>
+                                            </div>
+                                            <div class="col">
+                                                <div id="loading_fupb" class="progress progress-sm mr-2">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-file-upload fa-2x"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <%--<script src="/scripts/jquery-3.3.1.min.js"></script>--%>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/bootstrap.min.js"></script>
+    <script src="/scripts/jquery.easing.min.js"></script>
+    <script>
+        document.getElementById("UpProgressMain").style.display = "block";
+        document.getElementById("UpProgressMain").style.visibility = "visible";
+    </script>
+    <script src="/scripts/aktien.api.js"></script>
+    <script src="/scripts/aktien.alert.js"></script>
+    <script src="/scripts/aktien.tempstring.js"></script>
+    <script src="/scripts/aktien.sys.js"></script>
+    <asp:ContentPlaceHolder ID="cphFooter" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

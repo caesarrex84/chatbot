@@ -1,0 +1,50 @@
+﻿#accordionSidebar {
+    background-image: url(/images/backgroundMenu.jpeg);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.textsession {
+    float: left;
+    position: relative;
+    width: 52%;
+}
+
+    .textsession p {
+        margin: 0;
+        font-size: 10px;
+    }
+
+.datesession {
+    float: left;
+    position: relative;
+    width: 30%;
+}
+
+    .datesession p {
+        margin: 0;
+        text-align: center;
+        font-size: 10px;
+    }
+
+.hoursession {
+    float: left;
+    position: relative;
+    width: 18%;
+}
+
+    .hoursession p {
+        margin: 0;
+        font-size: 10px;
+        text-align: center;
+    }
+
+.lastsession {
+    float: left;
+    position: absolute;
+    width: 215px;
+    right: 0;
+    bottom: -5px;
+}

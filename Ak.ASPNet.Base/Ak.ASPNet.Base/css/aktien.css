@@ -1,0 +1,229 @@
+﻿.hidden-div {
+    display: none;
+}
+
+.c-white, .c-white i {
+    color: white;
+}
+
+#ui-name {
+    text-transform: uppercase;
+    color: gray;
+}
+
+.sidebar {
+    transition: all 1s;
+}
+
+.sidebar-dark #sidebarToggle {
+    padding: 5px 12px;
+}
+
+.sidebar #sidebarToggle::after {
+    margin-left: 0;
+}
+
+.sidebar.toggled #sidebarToggle::after {
+    margin: 0;
+}
+
+.hov-cursor {
+    cursor: pointer;
+}
+
+/*==============================================================*/
+/*  Inicio Mini mensaje                                         */
+/*==============================================================*/
+
+#nim-container {
+    position: fixed;
+    top: 3rem;
+    left: 3rem;
+    /*width: 100%;*/
+    display: none;
+    transition: all 1s;
+    z-index: 99999999;
+}
+
+/*==============================================================*/
+/*  Termina Mini mensaje                                        */
+/*==============================================================*/
+
+
+/*==============================================================*/
+/*	Inicio custom switch                                        */
+/*==============================================================*/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    /*float: right;*/
+    margin: 0;
+}
+
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        display: none;
+    }
+
+.switch-space {
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input.default:checked + .slider {
+    background-color: #444;
+}
+
+input.primary:checked + .slider {
+    background-color: #1b2e5b;
+}
+
+input.success:checked + .slider {
+    background-color: #8bc34a;
+}
+
+input.info:checked + .slider {
+    background-color: #3de0f5;
+}
+
+input.warning:checked + .slider {
+    background-color: #FFC107;
+}
+
+input.danger:checked + .slider {
+    background-color: #f44336;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #1b2e5b;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+/*==============================================================*/
+/*	Fin custom switch                                           */
+/*==============================================================*/
+
+
+/*==============================================================*/
+/*	Inicio Custom Paginator                                     */
+/*==============================================================*/
+
+.dataTables_paginate {
+    border: solid 1px #ccc;
+    border-radius: 7px;
+    padding: 0 !important;
+}
+
+    .dataTables_paginate span a {
+        border-left: solid 1px #ccc !important;
+        border-radius: 0px !important;
+        padding: 8px 10px 8px 12px !important;
+    }
+
+        .dataTables_paginate span a:last-child {
+            border-right: solid 1px #ccc !important;
+        }
+
+        .dataTables_paginate span a.ui-state-disabled, .dataTables_paginate a.ui-state-disabled {
+            color: #999 !important;
+        }
+
+/*==============================================================*/
+/*	Termina Custom Paginator                                    */
+/*==============================================================*/
+
+
+/*==============================================================*/
+/*	Inicia - Tamaños especiales Tablas                          */
+/*==============================================================*/
+
+.table_fs_13 {
+    font-size: 13px;
+}
+
+.table_fs_12 {
+    font-size: 12px;
+}
+
+.table_fs_10 {
+    font-size: 10px;
+}
+
+/*==============================================================*/
+/*	Termina - Tamaños especiales Tablas                         */
+/*==============================================================*/
+
+/*==========================================*/
+/*  Inicia - Fix para easy-autocomplete     */
+/*==========================================*/
+
+
+.easy-autocomplete{
+    width: 100% !important;
+}
+
+/*==========================================*/
+/*	Termina - Fix para easy-autocomplete    */
+/*==========================================*/
+
+
+/*==========================================*/
+/*  Inicia - Fix para datetime-picker     */
+/*==========================================*/
+
+
+.picker-switch.accordion-toggle a, .picker-switch.accordion-toggle, .picker-switch.accordion-toggle table {
+    width: 100%!important;
+    text-align: center;
+}
+
+.picker-switch.accordion-toggle a{
+    cursor:pointer;
+}
+
+
+
+/*==========================================*/
+/*	Termina -  Fix para datetime-picker    */
+/*==========================================*/
